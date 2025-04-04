@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="a.css">
+    <meta charset="UTF-8">
+    <title>My Page</title>
+    <style>
+        #highlight {
+            position: absolute;
+            height: 5px;
+            background-color: red;
+            bottom: 0;
+        }
+        .active{
+            color: red;
+        }
+        /* フォームの基本的なスタイル */
+        .login-form {
+            width: 300px;
+            margin: 20px auto; /* 中央寄せ */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box; /* パディングとボーダーを幅に含める */
+        }
+
+        .login-form button {
+            background-color: #007bff; /* 青色 */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーションメニュー -->
+    <ul id="myNavigation" class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- グラデーション背景のdiv -->
+    <div class="div">
+        <h1>This is a div with a gradient background.</h1>
+        <p>Some text here.</p>
+    </div>
+
+    <!-- ログインフォーム -->
+    <form class="login-form">
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">パスワード:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">ログイン</button>
+    </form>
+
+    <!-- ハイライト用div -->
+    <div id="highlight"></div>
+
+    <script>
+        const items = document.querySelectorAll('#myNavigation li');
+        const highlight = document.getElementById('highlight');
+
+        items.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                items.forEach(el => el.classList.remove('active'));
+                item.classList.add('active');
+                highlight.style.width = item.offsetWidth + 'px';
+                highlight.style.left = item.offsetLeft + 'px';
+            });
+        });
+    </script>
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="youtube_icon.png" alt="YouTube">
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="x_icon.png" alt="Twitter">
+                </a>
+                <!-- 他のSNSアイコンもここに追加できる -->
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 My Website. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">利用規約</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body{
+    font-family: sans-serif;
+}
+.navigation {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+.navigation li {
+  list-style: none;
+  position: relative;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+  
+
+.navigation li a:hover {
+  color: #ff0037;
+}
+
+.navigation li a.active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 13, 255);
+  border-radius: 5px;
+}
+
+.div {
+  background: linear-gradient(135deg, blue, white);
+  height: 200px;
+  width: 100%;
+}
+
+
+/* フッターのスタイル */
+footer {
+    background-color: #1a1919;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 32px; /* アイコンのサイズ */
+    height: 32px;
+    vertical-align: middle;
+}
+
+.copyright {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer-links a:hover{
+    text-decoration: underline;
+}
